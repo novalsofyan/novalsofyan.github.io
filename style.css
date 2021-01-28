@@ -6,23 +6,27 @@
 
 /* Font Website
 font-family: 'Comfortaa', cursive;
+font-family: 'Dosis', sans-serif;
 font-family: 'Gafata', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
 */
 
 /* Style */
-/* Nav Style From Dev Ed YouTube */
 
 body{
     display: grid;
     grid-auto-columns: auto;
+    background-color: #262626;
 }
+
+/* Navbar CSS Start, ref to Dev Ed YouTube */
 
 nav {
     display: flex;
     position: fixed;
     width: 100%;
     height: 100px;
-    background: skyblue;
     font-family: 'Gafata', sans-serif;
 }
 
@@ -34,7 +38,6 @@ nav {
     width: 50%;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .nav-links {
@@ -47,32 +50,102 @@ nav {
 }
 
 .nav-links li a {
-    font-size: 1.5em;
+    font-size: 1.8em;
+    font-weight: bolder;
     color: white;
     text-decoration: none;
 }
 
+/* Navbar CSS End */
+/* Container CSS Start */
+
 .container {
-    display: grid;
-    margin-top: 110px;
-    font-family: 'Comfortaa', cursive;
+    display: flex;
+    margin-top: 100px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    justify-content: center;
 }
 
-.container .profil h1 {
+.container h2 {
     text-align: center;
 }
 
+.container p {
+    font-size: 24px;
+}
+
+/* Container Profile CSS Start */
+
+.container-profil {
+    text-align: center;
+    font-size: 36px;
+}
+
+.container-profil img {
+    border-radius: 50%;
+    border: whitesmoke solid 5px;
+    width: 250px;
+    height: 250px;
+}
+
 @media screen and (max-width : 768px) {
+
+    .container p {
+        font-size: 20px;
+    }
+
+    .container-profil img {
+        border-radius: 50%;
+        border: whitesmoke solid 5px;
+        width: 200px;
+        height: 200px;
+    }
+
+    /* NAVBAR SETTINGS START */
 
     .line {
         width: 30px;
         height: 3px;
         background: white;
         margin: 5px;
+        transition: all .5s ease-in-out;
     }
-    nav {
-        position: fixed;
+
+    .line::before,
+    .line::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+        transition: all .5s ease-in-out;
     }
+
+    .line::before {
+        transform: translate(-5px, -15px);
+    }
+
+    .line::after {
+        transform: translate(-5px, 5px);
+    }
+
+    .line.open {
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .line.open::before {
+        background: #262626;
+        transform: rotate(45deg);
+    }
+
+    .line.open::after {
+        background: #262626;
+        transform: rotate(-45deg);
+    }
+
 
     .hamburger {
         position: absolute;
@@ -89,7 +162,7 @@ nav {
 
     .nav-links {
         position: fixed;
-        background: skyblue;
+        background: rgb(255, 187, 61);
         height: 100vh;
         width: 100%;
         flex-direction: column;
@@ -105,6 +178,8 @@ nav {
         pointer-events: all;
     }
 
+    /* NAVBAR SETTINGS END */
+
     .container {
         flex-direction: column;
     }
@@ -114,7 +189,9 @@ nav {
     }
 
     .nav-links li a {
-        font-size: 1.5em;
+        color: #262626;
+        font-size: 1.8em;
+        font-weight: bolder;
     }
 
     .nav-links li:nth-child(1) {
@@ -136,5 +213,4 @@ nav {
     li.fade {
         opacity: 1;
     }
-
 }
