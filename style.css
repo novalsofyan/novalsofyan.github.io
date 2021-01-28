@@ -12,6 +12,11 @@ font-family: 'Gafata', sans-serif;
 /* Style */
 /* Nav Style From Dev Ed YouTube */
 
+body{
+    display: grid;
+    grid-auto-columns: auto;
+}
+
 nav {
     display: flex;
     position: fixed;
@@ -47,12 +52,14 @@ nav {
     text-decoration: none;
 }
 
-.landing {
-    height: 90vh;
-    display :flex;
-    justify-content: center;
-    align-items: center;
+.container {
+    display: grid;
+    margin-top: 110px;
     font-family: 'Comfortaa', cursive;
+}
+
+.container .profil h1 {
+    text-align: center;
 }
 
 @media screen and (max-width : 768px) {
@@ -64,7 +71,7 @@ nav {
         margin: 5px;
     }
     nav {
-        position: relative;
+        position: fixed;
     }
 
     .hamburger {
@@ -76,7 +83,11 @@ nav {
         z-index: 2;
     }
 
-    .nav-links{
+    .nav-logo {
+        font-size: 1.2em;
+    }
+
+    .nav-links {
         position: fixed;
         background: skyblue;
         height: 100vh;
@@ -88,22 +99,22 @@ nav {
         pointer-events: none;
     }
 
-    .nav-links.open{
+    .nav-links.open {
         clip-path: circle(1200px at 90% -10%);
         -webkit-clip-path: circle(1200px at 90% -10%);
         pointer-events: all;
     }
 
-    .landing{
+    .container {
         flex-direction: column;
     }
 
-    .nav-links li{
+    .nav-links li {
         opacity: 0;
     }
 
     .nav-links li a {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .nav-links li:nth-child(1) {
