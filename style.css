@@ -25,7 +25,7 @@ body{
 nav {
     display: flex;
     position: fixed;
-    background-color: #262626;
+    background-color: rgb(255, 187, 61);
     width: 100%;
     height: 100px;
     font-family: 'Gafata', sans-serif;
@@ -33,7 +33,7 @@ nav {
 
 .nav-logo {
     display: flex;
-    color: white;
+    color: #262626;
     font-size: 1.8em;
     list-style: none;
     width: 50%;
@@ -51,10 +51,18 @@ nav {
 }
 
 .nav-links li a {
+    padding: 15px;
+    border-radius: 20px;
     font-size: 1.8em;
     font-weight: bolder;
-    color: white;
+    color: #262626;
     text-decoration: none;
+}
+
+.nav-links li a:hover {
+    color: rgb(255, 187, 61);
+    background: #262626;
+    transition: 0.5s ease-in-out;
 }
 
 /* Navbar CSS End */
@@ -64,7 +72,6 @@ nav {
     display: flex;
     flex-direction: column;
     margin-top: 100px;
-    color: white;
     font-family: 'Poppins', sans-serif;
     justify-content: center;
     justify-items: center;
@@ -84,6 +91,7 @@ nav {
     text-align: center;
     font-size: 36px;
     padding-bottom: 50px;
+    color: white;
 }
 
 .container-profil img {
@@ -129,6 +137,17 @@ nav {
     color: #262626;
 }
 
+.news a:hover {
+    text-decoration: none;
+    color: #262626;
+    transition: ease-in-out;
+}
+
+.news-rectangle:hover {
+    background-color: rgb(255, 187, 61);
+    transition: 0.5s ease-in-out;
+}
+
 #tanggal-news {
     font-size: 18px;
 }
@@ -153,7 +172,7 @@ nav {
     .line {
         width: 30px;
         height: 3px;
-        background: white;
+        background: rgb(255, 187, 61);
         margin: 5px;
         transition: all .5s ease-in-out;
     }
@@ -164,7 +183,7 @@ nav {
         position: absolute;
         width: 30px;
         height: 3px;
-        background: white;
+        background:rgb(255, 187, 61);
         margin: 5px;
         transition: all .5s ease-in-out;
     }
@@ -202,8 +221,13 @@ nav {
         z-index: 2;
     }
 
+    nav {
+        background: #262626;
+    }
+
     .nav-logo {
         font-size: 1.2em;
+        color: rgb(255, 187, 61);
     }
 
     .nav-links {
