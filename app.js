@@ -13,5 +13,14 @@ hamburger.addEventListener('click', () => {
     links.forEach(link => {
         link.classList.toggle('fade');
     })
-
 });
+
+navlinks.addEventListener('click', () => {
+    navlinks.classList.remove('open')
+    line.classList.remove('open')
+    lineBefore.classList.remove('open')
+    lineAfter.classList.remove('open')
+    links.forEach(link => {
+        link.classList.remove('fade');
+    })
+})
